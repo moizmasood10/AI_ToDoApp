@@ -34,13 +34,13 @@ const Todo = ({ task, toggleCompleted, deleteTodo, editTodo }) => {
     };
   
     return (
-      <div className='flex justify-left'>
+      <div className=''>
         {!isEditing ? (
           <div className='pb-2'>
-            <p className='font-mono' onClick={handleClick} style={{ cursor: 'pointer', textDecoration: task.completed ? 'line-through' : 'none' }}>{task.task}</p>
+            <p className='font-mono text-white' onClick={handleClick} style={{ cursor: 'pointer', textDecoration: task.completed ? 'line-through' : 'none' }}>{task.task}</p>
             <div>
-              <FontAwesomeIcon icon={faPenToSquare} onClick={handleEditTodo} style={{ marginRight: '8px', cursor: 'pointer' }} />
-              <FontAwesomeIcon onClick={handleDeleteTodo} style={{ cursor: 'pointer' }} icon={faTrash} />
+              <FontAwesomeIcon color='pink' icon={faPenToSquare} onClick={handleEditTodo} style={{ marginRight: '8px', cursor: 'pointer' }} />
+              <FontAwesomeIcon color='#FF1493' onClick={handleDeleteTodo} style={{ cursor: 'pointer' }} icon={faTrash} />
             </div>
           </div>
         ) : (

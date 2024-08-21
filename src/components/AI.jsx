@@ -22,20 +22,20 @@ const AI = ({ tasks }) => {
   }
 
   return (
-    <div className='flex justify-center items-start mt-24'>
+    <div className='flex justify-center items-start'>
         <div className="flex flex-col items-center">
-        <h1 class="mb-4 text-3xl font-extrabold text-gray-900 dark:text-white md:text-5xl lg:text-6xl">
-        <span class="text-transparent bg-clip-text bg-gradient-to-r to-pink-500 from-purple-700"> Order your tasks
+        <h1 class="mb-4 text-3xl font-extrabold text-gray-900 dark:text-white md:text-4xl lg:text-5xl">
+        <span class="bg-clip-text text-fuchsia-700"> Order your tasks
         </span>
         </h1>
 
     <button onClick={generateAnswer} class="mt-4 relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-500 to-pink-500 group-hover:from-purple-500 group-hover:to-pink-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800">
-    <span class="relative px-20 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+    <span class="relative px-20 py-2.5 pb-4transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
     Sort
     </span>
     </button>
     {answer.split('\n').map((line, index) => (
-        <p key={index} className='font-mono font-semibold mt-2'>{line}</p>
+        <p key={index} className='font-mono pt-4 text-white font-semibold mt-2'>{line}</p>
       ))}
   </div>
 </div>
